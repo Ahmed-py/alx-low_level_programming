@@ -1,0 +1,15 @@
+This is a C function named "rev_string" that takes a pointer to a character (string) as an input and reverses the order of the characters in the string using a temporary character array. Here's a breakdown of how the code works:
+
+The function starts by declaring two integer variables "i" and "j" and initializing them to 0. It also declares a character array "temp" of size 1000 to store the reversed string.
+
+The function enters a while loop that will continue until it reaches the null terminator character '\0' in the input string. In the loop, it increments the value of "i" to count the number of characters in the input string.
+
+After the loop terminates, the value of "i" represents the length of the input string (excluding the null terminator).
+
+Then, a for loop is entered that will run as long as the value of "i" is greater than 0. In the loop, each character of the input string is copied to the corresponding index in the temporary character array "temp" in reverse order. The index of "temp" where the character is copied is determined by subtracting 1 from the value of "i" and storing it in "j". Then, "j" is incremented by 1 to prepare for the next iteration.
+
+After the loop terminates, the character array "temp" contains the reversed order of the input string.
+
+Finally, another while loop is entered that will continue until the value of "i" is less than "j". In the loop, each character of the temporary character array "temp" is copied back to the corresponding index in the input string "s". The index of "s" where the character is copied is determined by using "i" as the index and then incrementing "i" by 1 to prepare for the next iteration.
+
+Note that the function assumes that the input string is null-terminated and doesn't contain more than 1000 characters. If these conditions are not met, the function may produce unexpected behavior. Also, the function modifies the input string in place, which means that the original contents of the string are lost after calling the function.

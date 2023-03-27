@@ -1,0 +1,13 @@
+This is a C function named "print_rev" that takes a pointer to a character (string) as an input and prints the string in reverse order followed by a new line character using another function named "_putchar". Here's a breakdown of how the code works:
+
+The function starts by declaring an integer variable "count" and initializing it to 0.
+
+Then, it enters a while loop that will continue until the value of "count" is negative. The loop checks each character in the string one by one by using array indexing with "s[count]". If it encounters the null terminator character '\0', it breaks out of the loop.
+
+After the loop terminates, the value of "count" is decremented by 1, so it now represents the last valid index of the string (excluding the null terminator).
+
+Then, another loop is entered that will run as long as the value of "count" is non-negative. In this loop, each character of the string is printed in reverse order by using "s[count]" and then decrementing "count" by 1.
+
+Finally, after the loop terminates, a new line character is printed by calling the "_putchar" function with the argument '\n'.
+
+Note that the function assumes that the input string is null-terminated and doesn't contain any null characters in the middle of the string. If these conditions are not met, the function may produce unexpected behavior.
