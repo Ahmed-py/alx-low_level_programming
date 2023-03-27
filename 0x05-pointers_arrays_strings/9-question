@@ -1,0 +1,44 @@
+#include "holberton.h"
+
+/**
+ * *_strcpy - copies string src to buffer pointed to by dest
+ * @dest: string pointer
+ * @src: buffer pointer
+ * Description: cpies string src to buffer
+ * Return: dest pointer
+ **/
+
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	i = 0;
+
+	while (i >= 0)
+	{
+		dest[i] = src[i];
+
+		if (src[i] == '\0')
+			return (dest);
+		i++;
+	}
+	return (dest);
+}
+
+This is a C function named "_strcpy" that takes two char pointers "dest" and "src" as inputs and copies the string pointed to by "src" to the buffer pointed to by "dest", including the terminating null byte. Here's a breakdown of how the code works:
+
+The function starts by declaring an integer variable "i" and initializing it to 0.
+
+Then, it enters a while loop that will continue indefinitely until it is terminated by a return statement.
+
+Inside the loop, it assigns the value of the current character of "src" to the current character of "dest" by using array indexing with "src[i]" and "dest[i]".
+
+After copying the character, it checks if the current character of "src" is the null byte, which indicates the end of the string.
+
+If it is the null byte, it returns the "dest" pointer, which now points to the copied string, including the null byte at the end.
+
+If it is not the null byte, it increments the value of "i" by 1 to prepare for the next iteration of the loop.
+
+When the loop terminates, the string pointed to by "src" has been copied to the buffer pointed to by "dest", including the terminating null byte.
+
+Finally, the function returns the "dest" pointer, which points to the copied string, including the null byte at the end.
