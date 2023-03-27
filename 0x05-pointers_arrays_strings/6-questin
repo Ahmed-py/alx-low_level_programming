@@ -1,0 +1,15 @@
+This is a C function named "puts2" that takes a pointer to a character (string) as an input and prints every other character of the string starting with the first character, followed by a new line character using another function named "_putchar". Here's a breakdown of how the code works:
+
+The function starts by declaring an integer variable "count" and initializing it to 0.
+
+Then, it enters a while loop that will continue until the value of "count" is negative. The loop checks each character in the string one by one by using array indexing with "str[count]". If it encounters the null terminator character '\0', it prints a new line character by calling the "_putchar" function with the argument '\n' and breaks out of the loop.
+
+Inside the loop, it checks whether the value of "count" is even by using the modulus operator "%". If the remainder of "count" divided by 2 is 0, it means that "count" is an even number, so it prints the character at index "count" in the string by calling the "_putchar" function with the argument "str[count]".
+
+After printing the character (if applicable), the value of "count" is incremented by 1 to prepare for the next iteration of the loop.
+
+When the loop terminates, every other character of the input string has been printed.
+
+Finally, a new line character is printed by calling the "_putchar" function with the argument '\n'.
+
+Note that the function assumes that the input string is null-terminated and doesn't contain any null characters in the middle of the string. If these conditions are not met, the function may produce unexpected behavior.
