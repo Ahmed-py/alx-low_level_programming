@@ -1,0 +1,53 @@
+#include "holberton.h"
+
+/**
+ * puts_half - prints half of the string
+ * @str: input string to print
+ * Description: prints second half of string
+ * Return: nothing
+ **/
+
+void puts_half(char *str)
+{
+	int i, j;
+
+	i = 0;
+
+	while (str[i] != '\0')
+		i++;
+
+	j = i / 2;
+
+	if (i % 2 == 1)
+		j++;
+
+	while (j < i)
+	{
+		_putchar(str[j]);
+		j++;
+	}
+	_putchar('\n');
+}
+This is a C function named "puts_half" that takes a pointer to a character (string) as an input and prints the second half of the string, followed by a new line character using another function named "_putchar". Here's a breakdown of how the code works:
+
+The function starts by declaring two integer variables "i" and "j" and initializing "i" to 0.
+
+Then, it enters a while loop that will continue until the value of the character at the current index in the string is the null terminator character '\0'. The loop checks each character in the string one by one by using array indexing with "str[i]".
+
+Inside the loop, it increments the value of "i" by 1 to keep track of the length of the string.
+
+After the loop terminates, the value of "i" is equal to the length of the string.
+
+Then, it calculates the index of the character at the middle of the string by dividing "i" by 2 and storing the result in "j". If "i" is odd (i.e., if "i" % 2 is 1), it adds 1 to "j" to ensure that the second half of the string starts at the next character.
+
+After calculating the value of "j", it enters another while loop that will continue until "j" is less than "i".
+
+Inside the loop, it prints each character in the string starting from the character at index "j" by calling the "_putchar" function with the argument "str[j]".
+
+After printing the characters, the value of "j" is incremented by 1 to prepare for the next iteration of the loop.
+
+When the loop terminates, the second half of the input string has been printed.
+
+Finally, a new line character is printed by calling the "_putchar" function with the argument '\n'.
+
+Note that the function assumes that the input string is null-terminated and doesn't contain any null characters in the middle of the string. If these conditions are not met, the function may produce unexpected behavior.
