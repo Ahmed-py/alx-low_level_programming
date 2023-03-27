@@ -1,0 +1,40 @@
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ * print_array - print n digits of an array
+ * @a: array to print
+ * @n: number of values to print
+ * Description: prints n digits of array
+ * Return: nothing
+ **/
+
+void print_array(int *a, int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", a[i]);
+		if (i != n - 1)
+			printf(", ");
+	}
+
+	printf("\n");
+}
+
+This is a C function named "print_array" that takes an integer pointer "a" and an integer "n" as inputs and prints the first "n" elements of the integer array "a" separated by commas and spaces, followed by a new line character using the "printf" function from the standard library. Here's a breakdown of how the code works:
+
+The function starts by declaring an integer variable "i" and initializing it to 0.
+
+Then, it enters a for loop that will iterate "n" times. The loop uses the variable "i" to access each element of the array "a" one by one by using array indexing with "a[i]".
+
+Inside the loop, it prints the value of the current element of the array by calling the "printf" function with the argument "%d" to format the integer as a decimal number and "a[i]" as the argument to print.
+
+After printing the value of the current element, it checks if the current element is the last element to be printed. If it's not the last element, it prints a comma and a space character by calling the "printf" function with the argument ", ".
+
+After printing the comma and space (if needed), the value of "i" is incremented by 1 to prepare for the next iteration of the loop.
+
+When the loop terminates, the first "n" elements of the input array have been printed.
+
+Finally, a new line character is printed by calling the "printf" function with the argument "\n".
